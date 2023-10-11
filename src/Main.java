@@ -6,6 +6,7 @@ public class Main {
         String playerA = "";
         String playerB = "";
         boolean again = false;
+        boolean done = false;
         String a = "";
         do {
 
@@ -18,24 +19,38 @@ public class Main {
 
             } else if (playerA.equalsIgnoreCase("P")) {
                 System.out.println("PlayerA move was Paper!");
+
             } else if (playerA.equalsIgnoreCase("S")) {
                 System.out.println("PlayerA move was Scissors! ");
+
             } else {
                 System.out.println("Invalid move. Please try again. ");
+
             }
             System.out.print("Enter a move player B [R,P,S]: ");
             playerB = in.nextLine();
 
-            if (playerB.equalsIgnoreCase("R")) {
-                System.out.println("PlayerB move was Rock!");
 
-            } else if (playerB.equalsIgnoreCase("P")) {
-                System.out.println("PlayerB move was Paper!");
-            } else if (playerB.equalsIgnoreCase("S")) {
-                System.out.println("PlayerB move was Scissors! ");
-            } else {
-                System.out.println("Invalid move. Please try again. ");
-            }
+
+
+
+
+
+                if (playerB.equalsIgnoreCase("R")) {
+                    System.out.println("PlayerB move was Rock!");
+
+                } else if (playerB.equalsIgnoreCase("P")) {
+                    System.out.println("PlayerB move was Paper!");
+
+                } else if (playerB.equalsIgnoreCase("S")) {
+                    System.out.println("PlayerB move was Scissors! ");
+
+                } else {
+                    System.out.println("Invalid move. Please try again. ");
+                }
+
+
+
             if (playerA.equalsIgnoreCase("R")) {
                 if (playerB.equalsIgnoreCase("R")) {
                     System.out.println("Rock vs Rock. Its a TIE! ");
@@ -70,15 +85,15 @@ public class Main {
 
                 }
             }
-        System.out.print("Do you want ot play again? [Y or N]: ");
-        a = in.nextLine();
-        if(a.equalsIgnoreCase("N"))
-        {
-         again = true;
-        }
-
-
+            System.out.print("Do you want ot play again? [Y or N]: ");
+            a = in.nextLine();
+            if (a.equalsIgnoreCase("N")) {
+                again = true;
+            }
         }while(!again);
+
+
+
 
 
     }
